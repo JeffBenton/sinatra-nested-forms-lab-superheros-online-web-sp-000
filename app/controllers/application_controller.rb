@@ -12,6 +12,8 @@ class App < Sinatra::Base
       binding.pry
       @team = params[:team]
       @hero1 = params[:team][:heroes][0]
+      @hero1 = params[:team][:heroes][1]
+      @hero1 = params[:team][:heroes][2]
       erb :team
     end
     
