@@ -3,12 +3,11 @@ require 'sinatra/base'
 class App < Sinatra::Base
 
     set :views, Proc.new { File.join(root, "../views/") }
-    binding.pry
     get '/' do
       erb :create
     end
     
-    post '/teams' do
+    post 'teams' do
       @team = params[:team]
       @hero1 = params[:team][:heroes][0]
       @hero1 = params[:team][:heroes][1]
